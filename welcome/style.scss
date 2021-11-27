@@ -1,0 +1,1065 @@
+/*
+Theme Name: Welcome English
+Author: Eliel Cezar
+Author URI: http://eliel.dev
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+$azul: #2f58a3;
+$vermelho: #ff2838;
+$azul-claro: #e2e6f1;
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: $azul;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 3.6em;
+  margin: 0 0 20px 0;
+
+  @media (orientation: portrait) {
+    font-size: 2.8em;
+    margin: 20px 0;
+  }
+}
+
+p {
+  color: #666;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (orientation: portrait) {
+    line-height: 30px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #fff;
+  background: $azul;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 7px 21px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+
+  &:hover {
+    background: $vermelho;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
+
+  .col {
+    flex: 1;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+#main-menu {
+  width: 100%;
+  padding-top: 10px;
+
+  @media (orientation: portrait) {
+    padding: 5%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    h1.logo {
+      a {
+        width: 180px;
+        height: 90px;
+        text-indent: -5000em;
+        background: transparent url(img/logo.png) top center no-repeat;
+        display: block;
+        margin: 0;
+        background-size: 100%;
+
+        @media (max-width: 767px) {
+          margin: 0;
+          width: 120px;
+          height: 62px;
+        }
+      }
+    }
+
+    ul.menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (orientation: portrait) {
+        display: none;
+      }
+
+      li {
+        display: inline-block;
+        min-height: 50px;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          color: $azul;
+          text-transform: uppercase;
+          font-family: 'Barlow Condensed', sans-serif;
+          text-decoration: none;
+          font-size: 1.2em;
+          font-weight: 700;
+          display: inline-block;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: all 0.3s;
+
+          &:hover {
+            background: $azul;
+            color: #fff;
+          }
+        }
+
+        &.social {
+          a {
+            padding-top: 5px;
+            .fab {
+              font-size: 34px;
+              line-height: 34px;
+            }
+          }
+        }
+      }
+      li.fb {
+        a {
+          text-indent: -5000em;
+          width: 31px;
+          background: transparent url(img/ico-fb.png) center no-repeat;
+        }
+      }
+      li.insta {
+        a {
+          text-indent: -5000em;
+          width: 31px;
+          background: transparent url(img/ico-insta.png) center no-repeat;
+        }
+      }
+    }
+    .menu.main-menu {
+      li {
+        margin: 0 10px;
+      }
+    }
+
+    .menu-extras {
+      display: flex;
+      align-items: center;
+
+      .lang {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 140px;
+          display: flex;
+          justify-content: space-between;
+          li {
+            margin: 0;
+            padding: 0;
+
+            a {
+              width: 38px;
+              height: 25px;
+              display: inline-block;
+              text-indent: -5000em;
+            }
+
+            &.en-us {
+              a {
+                background: transparent url(img/ico-flag-us.png) center
+                  no-repeat;
+              }
+            }
+            &.pt-br {
+              a {
+                background: transparent url(img/ico-flag-br.png) center
+                  no-repeat;
+              }
+            }
+            &.cart {
+              a {
+                background: transparent url(img/cart.png) center no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#top-header {
+  background: $azul-claro url(img/banner.jpg) top center no-repeat;
+  background-size: cover;
+  margin: -15px 0 100px 0;
+
+  @media (orientation: portrait) {
+    padding: 10%;
+    margin: 0 0 50px 0;
+    background-image: none;
+  }
+
+  img.foto-mobile {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    max-width: 200px;
+    margin: 0 auto 25px 0;
+
+    @media (orientation: landscape) {
+      display: none;
+    }
+  }
+
+  .row {
+    align-items: center;
+    height: 100%;
+    min-height: 675px;
+
+    @media (orientation: portrait) {
+      min-height: auto;
+    }
+
+    .col-1 {
+      padding-left: 0;
+      max-width: 50%;
+
+      @media (orientation: portrait) {
+        max-width: 100%;
+      }
+
+      h3 {
+        font-style: italic;
+        font-size: 3em;
+        line-height: 1.25em;
+        font-weight: 300;
+      }
+    }
+
+    .col-2 {
+      max-width: 40%;
+    }
+  }
+
+  h2 {
+    font-size: 5em;
+    line-height: 1em;
+    margin: 0;
+
+    @media (orientation: portrait) {
+      font-size: 3em;
+    }
+  }
+
+  p {
+    color: $azul;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+}
+
+#principal {
+  @media (orientation: portrait) {
+    overflow-x: hidden;
+  }
+
+  #experiencia {
+    margin-bottom: 75px;
+    @media (orientation: portrait) {
+      padding: 10%;
+      margin: 0;
+    }
+
+    p {
+      strong {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: $azul;
+        font-size: 3.2em;
+        margin-right: 7px;
+      }
+    }
+  }
+
+  #courses {
+    margin: 150px 0 50px 0;
+
+    @media (orientation: portrait) {
+      padding: 0 10% 0 7%;
+      margin: 50px 0 0 0;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (orientation: portrait) {
+        flex-direction: column;
+      }
+
+      .course {
+        flex-grow: 1;
+        width: 30%;
+        border: 2px solid #eee;
+        padding: 120px 3% 0 3%;
+        margin: 1.5% 1.5% 100px 1.5%;
+        position: relative;
+        text-align: center;
+
+        @media (orientation: portrait) {
+          width: 100%;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 126px;
+          height: 126px;
+          border-radius: 50%;
+          border: 3px solid $azul;
+          position: absolute;
+          top: -50px;
+          left: 50%;
+          margin-left: -63px;
+        }
+
+        h3 {
+          font-size: 2em;
+        }
+        h4 {
+          font-size: 1.1em;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 16px;
+          line-height: 28px;
+          text-align: left;
+        }
+        a.btn {
+          margin: 50px auto;
+        }
+      }
+      .course:hover {
+        border: 2px solid $azul;
+
+        &::before {
+          background-color: #f9f9f9;
+        }
+      }
+
+      .course.video {
+        &::before {
+          background: #fff url(img/ico-course-video.png) center no-repeat;
+        }
+      }
+      .course.ebook {
+        &::before {
+          background: #fff url(img/ico-course-ebook.png) center no-repeat;
+        }
+      }
+    }
+  }
+
+  #metodo {
+    margin: 0 0 100px 0;
+
+    h3 {
+      margin-left: 2%;
+      font-size: 4em;
+      margin-bottom: 40px;
+    }
+
+    @media (orientation: portrait) {
+      padding: 0 10% 10% 10%;
+      margin: 0;
+    }
+  }
+
+  #professora {
+    text-align: center;
+    margin-bottom: 200px;
+    display: flex;
+    background: $azul url(img/bg-professora.jpg) top center no-repeat;
+    margin: 0 auto 75px auto;
+    padding: 100px;
+
+    @media (orientation: portrait) {
+      padding: 10%;
+      margin-bottom: 10vh;
+      background: $azul;
+    }
+
+    .row {
+      display: flex;
+
+      @media (orientation: portrait) {
+        flex-direction: column;
+      }
+
+      .col-1 {
+        max-width: 40%;
+        margin-right: 5%;
+
+        iframe {
+          @media (orientation: portrait) {
+            max-width: 100%;
+            height: 350px;
+          }
+        }
+
+        @media (orientation: portrait) {
+          margin: 0;
+          max-width: 100%;
+        }
+      }
+      .col-2 {
+        text-align: left;
+
+        @media (orientation: portrait) {
+          margin: 0;
+          max-width: 100%;
+        }
+
+        h3 {
+          text-transform: uppercase;
+          color: #fff;
+          margin: 50px 0;
+          font-size: 3.6em;
+
+          @media (orientation: portrait) {
+            font-size: 2.5em;
+            margin-top: 0;
+          }
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  #depoimentos {
+    margin: 0 0 150px 0;
+
+    @media (orientation: portrait) {
+      margin-bottom: 50px;
+    }
+    .carrossel {
+      overflow: visible;
+
+      @media (orientation: portrait) {
+        padding: 0 10%;
+      }
+      .item {
+        display: flex;
+        overflow: visible;
+
+        @media (orientation: portrait) {
+          flex-direction: column;
+        }
+
+        .foto {
+          @media (orientation: landscape) {
+            padding: 0 2%;
+            position: relative;
+            border: 10px solid #f3f2f2;
+            position: relative;
+            flex: 1;
+            height: 200px;
+            margin-top: 100px;
+            max-width: 200px;
+          }
+
+          @media (orientation: portrait) {
+            /*text-align: center;
+            max-width: 100%;
+            position: relative;
+            margin: 250px;
+            height: 300px;*/
+          }
+
+          img {
+            @media (orientation: landscape) {
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
+              max-width: 200px;
+            }
+
+            @media (orientation: portrait) {
+              /*max-width: 85%;
+              margin: auto;*/
+            }
+          }
+        }
+        .depoimento {
+          padding: 150px 0 0 100px;
+          flex: 4;
+          background: transparent url(img/bg-depoimento.png) 50px 80px no-repeat;
+          background-size: 70px;
+
+          @media (orientation: portrait) {
+            padding: 0;
+            background: none;
+          }
+        }
+      }
+      .slick-dots {
+        @media (orientation: portrait) {
+          max-width: 80%;
+        }
+      }
+      .slick-arrow {
+        border: 2px solid #eee;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        text-indent: -5000em;
+
+        &::before {
+          display: none;
+        }
+      }
+      .slick-prev {
+        left: -50px;
+        background: transparent url(img/prev.png) center no-repeat;
+      }
+      .slick-next {
+        right: -50px;
+        background: transparent url(img/next.png) center no-repeat;
+      }
+    }
+  }
+}
+
+footer {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+  #contato {
+    color: #fff;
+    background: $azul url(img/bg-contato.jpg) top center no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+
+    @media (orientation: portrait) {
+      padding: 5%;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 5em;
+
+      @media (orientation: portrait) {
+        font-size: 3em;
+      }
+    }
+    p {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    ul {
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .col-2 {
+      align-items: flex-end;
+
+      .form-contato {
+        background: #fff;
+        border-radius: 5px;
+        padding: 25px;
+        max-width: 500px;
+        padding: 50px;
+        margin-bottom: -200px;
+
+        @media (orientation: portrait) {
+          padding: 25px;
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+
+        h4 {
+          font-size: 2.5em;
+          color: #333;
+          margin: 0 0 40px 0;
+
+          @media (orientation: portrait) {
+            font-size: 2em;
+            margin-bottom: 20px;
+          }
+        }
+
+        form {
+          input,
+          textarea {
+            border: none;
+            background: #f1f2f6;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1em;
+            font-family: 'Open Sans', sans-serif;
+          }
+
+          textarea {
+            height: 100px;
+          }
+          input[type='submit'] {
+            background: $azul;
+            color: #fff;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-bottom: 0;
+
+            &:hover {
+              background: $vermelho;
+            }
+          }
+
+          .ajax-loader {
+            display: none;
+          }
+
+          p {
+            margin: 0;
+          }
+
+          .wpcf7-response-output {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  #main-footer {
+    color: #fff;
+    background: $azul url(img/bg-professora.jpg) top center no-repeat;
+    padding: 150px 0 50px 0;
+
+    @media (orientation: portrait) {
+      padding: 5%;
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 1.6em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(#00d45e, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(#00d45e, 0);
+  }
+}
+
+a.wpp.desktop {
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -5000em;
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: transparent url(img/btn-wpp-mobile.png) center no-repeat;
+  background-size: auto;
+  background-size: cover;
+  box-shadow: 0 0 0 0 rgba(#00d45e, 0.5);
+  animation: pulse 1.5s infinite;
+  //-webkit-animation: pulse 1.5s infinite;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+a.wpp.mobile {
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -5000em;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: transparent url(img/btn-wpp-mobile.png) center no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 0 0 rgba(#00d45e, 0.5);
+  animation: pulse 1.5s infinite;
+  //-webkit-animation: pulse 1.5s infinite;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 30px rgba(#00d45e, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(#00d45e, 0);
+  }
+}
+
+/*--- PAGINA DE UM PRODUTO ---------------------------------------------------------------------*/
+
+.single-product {
+  .woocommerce-breadcrumb {
+    display: none;
+  }
+  #principal {
+    padding: 100px 0;
+
+    @media (orientation: portrait) {
+      padding: 10%;
+    }
+
+    .product {
+      display: flex;
+
+      @media (orientation: portrait) {
+        flex-direction: column;
+      }
+
+      div.summary {
+        float: none;
+        padding-left: 50px;
+
+        @media (orientation: portrait) {
+          padding-left: 0;
+        }
+
+        h1 {
+          font-size: 3em;
+
+          @media (orientation: portrait) {
+            font-size: 2.2em;
+          }
+        }
+        .price {
+          color: $azul;
+        }
+        .woocommerce-product-details__short-description {
+          margin: 50px 0;
+          p {
+            font-size: 16px;
+            line-height: 28px;
+          }
+        }
+        .quantity {
+          display: none;
+        }
+        button[type='submit'] {
+          background: $azul;
+          font-size: 1.2em;
+          padding: 15px 50px;
+
+          &:hover {
+            background: $vermelho;
+          }
+        }
+
+        .product_meta {
+          display: none;
+        }
+      }
+    }
+
+    .related.products {
+      h2 {
+        @media (orientation: portrait) {
+          font-size: 2.5em;
+        }
+      }
+      ul.products {
+        @media (orientation: portrait) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        li {
+          @media (orientation: portrait) {
+            width: 100%;
+          }
+
+          h2 {
+            font-size: 1.4em;
+          }
+          .price {
+            color: $azul;
+          }
+          .add_to_cart_button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--- PAGINA DO CARRINHO ----------------------------------------------------------------------------------*/
+.woocommerce-cart {
+  #masthead {
+    display: none;
+  }
+  #principal {
+    padding: 70px 0;
+
+    .woocommerce-message {
+      a.button.wc-forward {
+        display: none;
+      }
+    }
+    input#coupon_code {
+      width: 250px;
+      padding: 10px 30px;
+    }
+
+    a.checkout-button {
+      background: $azul;
+
+      &:hover {
+        background: $vermelho;
+      }
+    }
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/*--- PAGINA DO CHECKOUT ----------------------------------------------------------------------------------*/
+
+.woocommerce-checkout {
+  #masthead {
+    display: none;
+  }
+  #principal {
+    padding: 70px 0;
+
+    @media (orientation: portrait) {
+      padding: 10%;
+    }
+
+    .woocommerce-info {
+      a {
+        font-weight: bold;
+        color: $azul;
+        text-decoration: none;
+      }
+    }
+  }
+  form.checkout_coupon {
+    input#coupon_code {
+      padding: 10px 30px;
+    }
+  }
+  form.checkout {
+    display: flex;
+
+    @media (orientation: portrait) {
+      flex-direction: column;
+    }
+
+    #customer_details {
+      width: 50%;
+
+      @media (orientation: portrait) {
+        width: 100%;
+      }
+      .col-1 {
+        width: 100%;
+        padding-right: 25px;
+
+        @media (orientation: portrait) {
+          padding-right: 0;
+        }
+
+        h3 {
+          font-size: 2.6em;
+        }
+
+        input,
+        textarea,
+        select {
+          border: 1px solid #ccc;
+          //background: #f1f2f6;
+          padding: 10px 20px;
+          border-radius: 5px;
+          //border: none;
+          margin-bottom: 20px;
+          width: 100%;
+          box-sizing: border-box;
+          font-size: 1em;
+          font-family: 'Open Sans', sans-serif;
+        }
+
+        textarea {
+          height: 100px;
+        }
+        input[type='submit'] {
+          background: $azul;
+          color: #fff;
+          font-weight: 800;
+          text-transform: uppercase;
+          cursor: pointer;
+          margin-bottom: 0;
+
+          &:hover {
+            background: $vermelho;
+          }
+        }
+      }
+    }
+
+    #order_review {
+      width: 50%;
+      padding: 100px 0 0 25px;
+
+      @media (orientation: portrait) {
+        width: 100%;
+        padding-left: 0;
+      }
+      #payment {
+        background: #f9f9f9;
+
+        div.payment_box {
+          background: #fff;
+        }
+      }
+      #pagseguro-payment-form {
+        border: none;
+        padding: 0;
+      }
+      .payment_box.payment_method_pagseguro {
+        background: #fff;
+        border: none !important;
+
+        .form-row {
+          float: none;
+          width: 100%;
+
+          input {
+            font-size: 1em !important;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    h3#order_review_heading,
+    .woocommerce-additional-fields,
+    .woocommerce-privacy-policy-text {
+      display: none;
+    }
+  }
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+/*
+ Theme Name:   Welcome English - pt_BR
+ Description:  Tema para a versão pt_BR do Welcome English
+ Author: Eliel Cezar
+ Author URI: http://eliel.dev
+ Template:     welcome
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html 
+ Text Domain:  welcomebr
+*/
+
+/*--- CHECKOUT ---------------------------------------------------------------------------*/
+@at-root .woocommerce-checkout {
+  #billing_country_field {
+    display: none;
+  }
+}
